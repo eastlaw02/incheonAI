@@ -1,7 +1,6 @@
 package com.uou.incheonai
 
 import android.os.Bundle
-import android.widget.TextView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 
@@ -10,7 +9,6 @@ class MainActivity : BasePrototypeActivity() {
     private lateinit var flightNumberInput: TextInputEditText
     private lateinit var routeInput: TextInputEditText
     private lateinit var departureInput: TextInputEditText
-    private lateinit var flightSummaryText: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +29,6 @@ class MainActivity : BasePrototypeActivity() {
     }
 
     private fun bindActions() {
-
         findViewById<MaterialButton>(R.id.nextButton).setOnClickListener {
             PrototypeSession.currentFlight = readFlightFromInputs()
             PrototypeSession.resetAnalysis()
@@ -41,7 +38,6 @@ class MainActivity : BasePrototypeActivity() {
 
     private fun renderInitialState() {
         applyFlightToInputs(PrototypeRepository.sampleFlight)
-        renderSummary()
     }
 
     private fun applyFlightToInputs(flightContext: FlightContext) {
@@ -85,17 +81,6 @@ class MainActivity : BasePrototypeActivity() {
             flightNumber = flightNumber,
             route = route,
             departureMinutes = departureMinutes
-        )
-    }
-
-    private fun renderSummary() {
-        val flight = PrototypeSession.currentFlight
-        flightSummaryText.text = getString(
-            R.string.summary_connected_flight,
-            flight.airlineName,
-            flight.flightNumber,
-            flight.route,
-            flight.departureLabel(),
         )
     }
 
