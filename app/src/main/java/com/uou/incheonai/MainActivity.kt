@@ -28,15 +28,9 @@ class MainActivity : BasePrototypeActivity() {
         flightNumberInput = findViewById(R.id.flightNumberInput)
         routeInput = findViewById(R.id.routeInput)
         departureInput = findViewById(R.id.departureInput)
-        flightSummaryText = findViewById(R.id.flightSummaryText)
     }
 
     private fun bindActions() {
-        findViewById<MaterialButton>(R.id.applyFlightButton).setOnClickListener {
-            PrototypeSession.currentFlight = readFlightFromInputs()
-            PrototypeSession.resetAnalysis()
-            renderSummary()
-        }
 
         findViewById<MaterialButton>(R.id.nextButton).setOnClickListener {
             PrototypeSession.currentFlight = readFlightFromInputs()

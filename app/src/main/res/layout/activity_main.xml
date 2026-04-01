@@ -145,31 +145,13 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/applyFlightButton"
+                        android:id="@+id/nextButton"
                         style="@style/Widget.IncheonAI.Button.Primary"
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="@dimen/button_height"
-                        android:layout_weight="1"
-                        android:text="@string/action_apply_flight" />
+                        android:text="@string/action_next" />
                 </LinearLayout>
-
-                <TextView
-                    android:id="@+id/flightSummaryText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/content_spacing_large"
-                    android:background="@color/summary_background"
-                    android:padding="@dimen/panel_padding"
-                    android:textColor="@color/text_primary"
-                    android:textSize="@dimen/summary_text_size" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/nextButton"
-            style="@style/Widget.IncheonAI.Button.Primary"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/button_height"
-            android:text="@string/action_next" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
