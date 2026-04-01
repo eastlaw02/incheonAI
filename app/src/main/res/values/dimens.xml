@@ -1,0 +1,31 @@
+<resources>
+    <dimen name="screen_padding">20dp</dimen>
+    <dimen name="screen_padding_vertical">24dp</dimen>
+    <dimen name="card_padding">22dp</dimen>
+    <dimen name="card_margin">18dp</dimen>
+    <dimen name="content_spacing_small">8dp</dimen>
+    <dimen name="content_spacing_medium">12dp</dimen>
+    <dimen name="content_spacing_large">18dp</dimen>
+    <dimen name="content_spacing_xlarge">24dp</dimen>
+    <dimen name="form_field_spacing">14dp</dimen>
+    <dimen name="button_gap">8dp</dimen>
+    <dimen name="panel_padding">18dp</dimen>
+    <dimen name="hero_radius">32dp</dimen>
+    <dimen name="card_radius">28dp</dimen>
+    <dimen name="input_corner_radius">20dp</dimen>
+    <dimen name="hero_title_size">30sp</dimen>
+    <dimen name="hero_body_size">15sp</dimen>
+    <dimen name="section_title_size">24sp</dimen>
+    <dimen name="section_body_size">14sp</dimen>
+    <dimen name="input_text_size">16sp</dimen>
+    <dimen name="button_text_size">15sp</dimen>
+    <dimen name="button_height">56dp</dimen>
+    <dimen name="summary_text_size">15sp</dimen>
+    <dimen name="headline_text_size">26sp</dimen>
+    <dimen name="body_text_size">15sp</dimen>
+    <dimen name="item_title_size">19sp</dimen>
+    <dimen name="item_meta_size">13sp</dimen>
+    <dimen name="item_decision_size">16sp</dimen>
+    <dimen name="chip_text_size">15sp</dimen>
+    <dimen name="preview_height">230dp</dimen>
+</resources>

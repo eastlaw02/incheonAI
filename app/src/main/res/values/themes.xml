@@ -1,0 +1,61 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.IncheonAI" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/button_tint_dark</item>
+        <item name="colorSecondary">@color/hero_surface_end</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.IncheonAI" parent="Base.Theme.IncheonAI" />
+
+    <style name="Widget.IncheonAI.Card" parent="">
+        <item name="cardBackgroundColor">@color/card_surface</item>
+        <item name="cardCornerRadius">@dimen/card_radius</item>
+        <item name="cardElevation">3dp</item>
+        <item name="strokeColor">@color/card_stroke</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="Widget.IncheonAI.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="backgroundTint">@color/button_tint_dark</item>
+        <item name="cornerRadius">22dp</item>
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="Widget.IncheonAI.Button.Secondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textColor">@color/button_tint_dark</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="backgroundTint">@color/button_tint_light</item>
+        <item name="strokeColor">@color/button_tint_light</item>
+        <item name="cornerRadius">22dp</item>
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="Widget.IncheonAI.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxBackgroundColor">@color/input_background</item>
+        <item name="boxStrokeColor">@color/input_stroke</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/input_corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/input_corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/input_corner_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/input_corner_radius</item>
+        <item name="hintTextColor">@color/text_secondary</item>
+    </style>
+
+    <style name="Widget.IncheonAI.TextField" parent="">
+        <item name="android:textSize">@dimen/input_text_size</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+    </style>
+</resources>
