@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">IncheonAI</string>
 
-    <string name="hero_badge">INCHEON AIRPORT AI PROTOTYPE</string>
+    <string name="hero_badge">INCHEON AIRPORT</string>
     <string name="hero_title">AI 기반 개인 수하물 사전 검사</string>
     <string name="hero_subtitle">촬영 → 인식 → 규정 비교 → 행동 추천 흐름으로, 공항 도착 전에 짐을 다시 정리할 수 있도록 돕는 서비스입니다.</string>
 
-    <string name="step_flight_title">1. 항공편 연동</string>
-    <string name="step_flight_body">인천공항 앱 예약 정보와 연결되는 단계입니다. 항공사, 편명, 노선, 출발 임박도를 먼저 확인합니다.</string>
+    <string name="step_flight_title">1. 항공편 정보</string>
+    <string name="step_flight_body">항공권 예약 정보와 연결되는 단계입니다.</string>
     <string name="step_scan_title">2. 촬영 및 AI 인식</string>
     <string name="step_scan_body">캐리어 내부 또는 준비된 물품을 촬영하거나 선택한 뒤 AI 인식 기반 분석을 실행합니다.</string>
     <string name="step_rules_title">3. 항공사 규정 비교 결과</string>
@@ -33,7 +33,7 @@
     <string name="hint_scan_preset">AI 인식 프리셋</string>
 
     <string name="action_load_sample_flight">샘플 항공편 연동</string>
-    <string name="action_apply_flight">연동 적용</string>
+    <string name="action_apply_flight">항공권 적용</string>
     <string name="action_capture_image">사진 촬영</string>
     <string name="action_select_image">사진 선택</string>
     <string name="action_run_analysis">분석 실행</string>

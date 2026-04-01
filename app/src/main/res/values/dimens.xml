@@ -10,9 +10,9 @@
     <dimen name="form_field_spacing">14dp</dimen>
     <dimen name="button_gap">8dp</dimen>
     <dimen name="panel_padding">18dp</dimen>
-    <dimen name="hero_radius">32dp</dimen>
-    <dimen name="card_radius">28dp</dimen>
-    <dimen name="input_corner_radius">20dp</dimen>
+    <dimen name="hero_radius">8dp</dimen>
+    <dimen name="card_radius">8dp</dimen>
+    <dimen name="input_corner_radius">8dp</dimen>
     <dimen name="hero_title_size">30sp</dimen>
     <dimen name="hero_body_size">15sp</dimen>
     <dimen name="section_title_size">24sp</dimen>
