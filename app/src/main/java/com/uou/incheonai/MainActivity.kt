@@ -1,17 +1,15 @@
 package com.uou.incheonai
 
 import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
 import android.widget.TextView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : BasePrototypeActivity() {
-    private lateinit var airlineInput: AutoCompleteTextView
+    private lateinit var airlineInput: TextInputEditText
     private lateinit var flightNumberInput: TextInputEditText
     private lateinit var routeInput: TextInputEditText
-    private lateinit var departureInput: AutoCompleteTextView
+    private lateinit var departureInput: TextInputEditText
     private lateinit var flightSummaryText: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +19,6 @@ class MainActivity : BasePrototypeActivity() {
         applyWindowInsets(R.id.rootFlight)
 
         bindViews()
-        bindDropdowns()
         bindActions()
         renderInitialState()
     }
@@ -34,29 +31,13 @@ class MainActivity : BasePrototypeActivity() {
         flightSummaryText = findViewById(R.id.flightSummaryText)
     }
 
-    private fun bindDropdowns() {
-        airlineInput.setAdapter(
-            ArrayAdapter(
-                this,
-                android.R.layout.simple_list_item_1,
-                PrototypeRepository.airlineProfiles.map { it.airlineName },
-            ),
-        )
-        departureInput.setAdapter(
-            ArrayAdapter(
-                this,
-                android.R.layout.simple_list_item_1,
-                PrototypeRepository.departureOptions.keys.toList(),
-            ),
-        )
-    }
-
     private fun bindActions() {
         findViewById<MaterialButton>(R.id.applyFlightButton).setOnClickListener {
             PrototypeSession.currentFlight = readFlightFromInputs()
             PrototypeSession.resetAnalysis()
             renderSummary()
         }
+
         findViewById<MaterialButton>(R.id.nextButton).setOnClickListener {
             PrototypeSession.currentFlight = readFlightFromInputs()
             PrototypeSession.resetAnalysis()
@@ -70,22 +51,47 @@ class MainActivity : BasePrototypeActivity() {
     }
 
     private fun applyFlightToInputs(flightContext: FlightContext) {
-        airlineInput.setText(flightContext.airlineName, false)
+        airlineInput.setText(flightContext.airlineName)
         flightNumberInput.setText(flightContext.flightNumber)
         routeInput.setText(flightContext.route)
-        departureInput.setText(flightContext.departureLabel(), false)
+        departureInput.setText(flightContext.departureLabel())
         PrototypeSession.currentFlight = flightContext
     }
 
     private fun readFlightFromInputs(): FlightContext {
         val sampleFlight = PrototypeRepository.sampleFlight
-        val airlineName = airlineInput.text?.toString()?.takeIf { it.isNotBlank() } ?: sampleFlight.airlineName
-        val flightNumber = flightNumberInput.text?.toString()?.takeIf { it.isNotBlank() } ?: sampleFlight.flightNumber
-        val route = routeInput.text?.toString()?.takeIf { it.isNotBlank() } ?: sampleFlight.route
-        val departureLabel = departureInput.text?.toString()?.takeIf { it.isNotBlank() }
-            ?: PrototypeRepository.departureOptions.keys.first()
-        val departureMinutes = PrototypeRepository.departureOptions[departureLabel] ?: sampleFlight.departureMinutes
-        return FlightContext(airlineName, flightNumber, route, departureMinutes)
+
+        val airlineName = airlineInput.text?.toString()?.trim()
+            ?.takeIf { it.isNotBlank() }
+            ?: sampleFlight.airlineName
+
+        val flightNumber = flightNumberInput.text?.toString()?.trim()
+            ?.takeIf { it.isNotBlank() }
+            ?: sampleFlight.flightNumber
+
+        val route = routeInput.text?.toString()?.trim()
+            ?.takeIf { it.isNotBlank() }
+            ?: sampleFlight.route
+
+        val departureText = departureInput.text?.toString()?.trim()
+            ?.takeIf { it.isNotBlank() }
+
+        val departureMinutes = when {
+            departureText == null -> sampleFlight.departureMinutes
+            PrototypeRepository.departureOptions.containsKey(departureText) -> {
+                PrototypeRepository.departureOptions[departureText] ?: sampleFlight.departureMinutes
+            }
+            else -> {
+                departureText.replace("분", "").toIntOrNull() ?: sampleFlight.departureMinutes
+            }
+        }
+
+        return FlightContext(
+            airlineName = airlineName,
+            flightNumber = flightNumber,
+            route = route,
+            departureMinutes = departureMinutes
+        )
     }
 
     private fun renderSummary() {
@@ -100,7 +106,9 @@ class MainActivity : BasePrototypeActivity() {
     }
 
     private fun FlightContext.departureLabel(): String {
-        return PrototypeRepository.departureOptions.entries.firstOrNull { it.value == departureMinutes }?.key
+        return PrototypeRepository.departureOptions.entries
+            .firstOrNull { it.value == departureMinutes }
+            ?.key
             ?: "${departureMinutes}분"
     }
 }
