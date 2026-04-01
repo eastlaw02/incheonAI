@@ -52,9 +52,6 @@ class MainActivity : BasePrototypeActivity() {
     }
 
     private fun bindActions() {
-        findViewById<MaterialButton>(R.id.loadSampleFlightButton).setOnClickListener {
-            applyFlightToInputs(PrototypeRepository.sampleFlight)
-        }
         findViewById<MaterialButton>(R.id.applyFlightButton).setOnClickListener {
             PrototypeSession.currentFlight = readFlightFromInputs()
             PrototypeSession.resetAnalysis()
