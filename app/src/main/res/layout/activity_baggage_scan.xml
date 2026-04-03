@@ -45,7 +45,7 @@
                     android:text="@string/step_scan_title"
                     android:textColor="@color/hero_text"
                     android:textSize="@dimen/hero_title_size"
-                    android:textStyle="bold" />
+                    android:fontFamily="@font/pretendard_bold" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -75,15 +75,7 @@
                     android:text="@string/section_scan_title"
                     android:textColor="@color/text_primary"
                     android:textSize="@dimen/section_title_size"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/content_spacing_small"
-                    android:text="@string/section_scan_body"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="@dimen/section_body_size" />
+                    android:fontFamily="@font/pretendard_bold" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.IncheonAI.TextInputLayout"
@@ -92,9 +84,9 @@
                     android:layout_marginTop="@dimen/form_field_spacing"
                     android:hint="@string/hint_scan_preset">
 
-                    <AutoCompleteTextView
+                    <com.google.android.material.textfield.TextInputEditText
                         style="@style/Widget.IncheonAI.TextField"
-                        android:id="@+id/presetInput"
+                        android:id="@+id/airlineInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="none" />
@@ -104,21 +96,12 @@
                     android:id="@+id/previewImage"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/preview_height"
-                    android:layout_marginTop="@dimen/content_spacing_large"
+                    android:layout_marginTop="36dp"
                     android:background="@color/preview_background"
                     android:contentDescription="@string/content_desc_preview"
                     android:padding="@dimen/panel_padding"
                     android:scaleType="centerInside"
                     android:src="@android:drawable/ic_menu_camera" />
-
-                <TextView
-                    android:id="@+id/scanStatusText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/form_field_spacing"
-                    android:text="@string/status_image_idle"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="@dimen/section_body_size" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -133,7 +116,15 @@
                         android:layout_height="@dimen/button_height"
                         android:layout_marginEnd="@dimen/button_gap"
                         android:layout_weight="1"
-                        android:text="@string/action_capture_image" />
+                        android:text="@string/action_capture_image"
+
+                        android:maxLines="1"
+                        android:ellipsize="none"
+
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeMaxTextSize="16sp"
+                        android:autoSizeStepGranularity="1sp"/>
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/selectImageButton"
@@ -142,7 +133,15 @@
                         android:layout_height="@dimen/button_height"
                         android:layout_marginEnd="@dimen/button_gap"
                         android:layout_weight="1"
-                        android:text="@string/action_select_image" />
+                        android:text="@string/action_select_image"
+
+                        android:maxLines="1"
+                        android:ellipsize="none"
+
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeMaxTextSize="16sp"
+                        android:autoSizeStepGranularity="1sp"/>
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/analyzeButton"
@@ -150,7 +149,15 @@
                         android:layout_width="0dp"
                         android:layout_height="@dimen/button_height"
                         android:layout_weight="1"
-                        android:text="@string/action_run_analysis" />
+                        android:text="@string/action_run_analysis"
+
+                        android:maxLines="1"
+                        android:ellipsize="none"
+
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeMaxTextSize="16sp"
+                        android:autoSizeStepGranularity="1sp"/>
                 </LinearLayout>
 
                 <TextView
@@ -160,7 +167,7 @@
                     android:text="@string/section_recognized_title"
                     android:textColor="@color/text_primary"
                     android:textSize="@dimen/section_title_size"
-                    android:textStyle="bold" />
+                    android:fontFamily="@font/pretendard_bold" />
 
                 <LinearLayout
                     android:id="@+id/recognizedItemsContainer"
@@ -174,6 +181,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_spacing_large"
             android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton

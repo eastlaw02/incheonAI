@@ -8,9 +8,9 @@
     <string name="step_flight_title">1. 항공편 정보</string>
     <string name="step_flight_body">항공권 예약 정보와 연결되는 단계입니다.</string>
     <string name="step_scan_title">2. 촬영 및 AI 인식</string>
-    <string name="step_scan_body">캐리어 내부 또는 준비된 물품을 촬영하거나 선택한 뒤 AI 인식 기반 분석을 실행합니다.</string>
+    <string name="step_scan_body">캐리어 내부 또는 준비된 물품을 촬영하거나 선택한 뒤, AI 기반 분석을 실행합니다.</string>
     <string name="step_rules_title">3. 항공사 규정 비교 결과</string>
-    <string name="step_rules_body">각 물품에 대해 기내 반입, 위탁 수하물, 제거 필요 여부를 직관적으로 안내합니다.</string>
+    <string name="step_rules_body">각 물품에 대해 기내 반입, 위탁 수하물, 제거 필요 여부를 안내합니다.</string>
     <string name="step_integration_title">4. 인천공항 앱 연동 상태</string>
     <string name="step_integration_body">이 화면은 현재 프로토타입에서 어떤 데이터가 실제 앱과 연결될 수 있는지 보여줍니다.</string>
     <string name="step_overview_title">5. 종합 가이드</string>

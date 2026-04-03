@@ -5,7 +5,7 @@
     <dimen name="card_margin">18dp</dimen>
     <dimen name="content_spacing_small">8dp</dimen>
     <dimen name="content_spacing_medium">12dp</dimen>
-    <dimen name="content_spacing_large">18dp</dimen>
+    <dimen name="content_spacing_large">54dp</dimen>
     <dimen name="content_spacing_xlarge">24dp</dimen>
     <dimen name="form_field_spacing">14dp</dimen>
     <dimen name="button_gap">8dp</dimen>

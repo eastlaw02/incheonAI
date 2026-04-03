@@ -19,6 +19,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/card_margin"
             app:cardBackgroundColor="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            app:strokeWidth="0dp"
             app:cardCornerRadius="@dimen/hero_radius"
             app:cardElevation="0dp">
 
@@ -43,7 +45,7 @@
                     android:text="@string/step_rules_title"
                     android:textColor="@color/hero_text"
                     android:textSize="@dimen/hero_title_size"
-                    android:textStyle="bold" />
+                    android:fontFamily="@font/pretendard_bold" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -73,13 +75,13 @@
                     android:text="@string/section_rules_title"
                     android:textColor="@color/text_primary"
                     android:textSize="@dimen/section_title_size"
-                    android:textStyle="bold" />
+                    android:fontFamily="@font/pretendard_bold" />
 
                 <LinearLayout
                     android:id="@+id/analysisResultsContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/content_spacing_large"
+                    android:layout_marginTop="14dp"
                     android:orientation="vertical" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -87,6 +89,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_spacing_large"
             android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
