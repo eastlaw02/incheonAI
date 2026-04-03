@@ -84,7 +84,7 @@
                     android:layout_marginTop="@dimen/form_field_spacing"
                     android:hint="@string/hint_scan_preset">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <AutoCompleteTextView
                         style="@style/Widget.IncheonAI.TextField"
                         android:id="@+id/presetInput"
                         android:layout_width="match_parent"
