@@ -37,6 +37,7 @@
     <string name="action_capture_image">사진 촬영</string>
     <string name="action_select_image">사진 선택</string>
     <string name="action_run_analysis">분석 실행</string>
+    <string name="action_apply_demo_preset">데모 프리셋 적용</string>
     <string name="action_next">다음 단계</string>
     <string name="action_previous">이전 단계</string>
     <string name="action_restart">처음으로 돌아가기</string>
@@ -102,6 +103,17 @@
     <string name="detail_perfume">80ml 향수 1개</string>
     <string name="detail_spray">180ml 헤어 스프레이</string>
     <string name="detail_pocket_knife">접이식 소형 칼</string>
+    <string name="detail_detected_liquid">촬영 이미지에서 감지된 용기형 액체류</string>
+    <string name="detail_detected_laptop">촬영 이미지에서 감지된 노트북</string>
+    <string name="detail_detected_hair_device">촬영 이미지에서 감지된 전열기기</string>
+    <string name="detail_detected_sharp">촬영 이미지에서 감지된 날카로운 물품</string>
+    <string name="detail_detected_battery_like">촬영 이미지에서 감지된 소형 전자기기</string>
+
+    <string name="status_model_loading">객체 인식 모델을 준비하고 있습니다.</string>
+    <string name="status_detecting_objects">촬영 이미지를 분석해 물품을 인식하고 있습니다.</string>
+    <string name="status_no_actionable_detection">이미지에서 수하물 처리 대상 품목이 명확히 감지되지 않았습니다. 다른 각도에서 다시 촬영하거나 데모 프리셋을 사용해 주세요.</string>
+    <string name="status_detection_error">객체 인식 중 오류가 발생했습니다. 이미지를 다시 선택하거나 재시도해 주세요.</string>
+    <string name="status_demo_preset_applied">객체 인식 결과가 부족하여 선택한 데모 프리셋 기준으로 분석 결과를 생성했습니다.</string>
 
     <string name="decision_power_bank">기내 반입 가능 / 위탁 수하물 불가</string>
     <string name="decision_hair_iron">일반 전기식은 반입 가능</string>

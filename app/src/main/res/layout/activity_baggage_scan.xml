@@ -92,16 +92,26 @@
                         android:inputType="none" />
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <ImageView
-                    android:id="@+id/previewImage"
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/preview_height"
-                    android:layout_marginTop="36dp"
+                    android:layout_marginTop="@dimen/content_spacing_large"
                     android:background="@color/preview_background"
-                    android:contentDescription="@string/content_desc_preview"
-                    android:padding="@dimen/panel_padding"
-                    android:scaleType="centerInside"
-                    android:src="@android:drawable/ic_menu_camera" />
+                    android:padding="@dimen/content_spacing_small">
+
+                    <ImageView
+                        android:id="@+id/previewImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/content_desc_preview"
+                        android:scaleType="fitCenter"
+                        android:src="@android:drawable/ic_menu_camera" />
+
+                    <com.uou.incheonai.BaggageOverlayView
+                        android:id="@+id/overlayView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
 
                 <TextView
                     android:id="@+id/scanStatusText"
@@ -111,6 +121,14 @@
                     android:text="@string/status_image_idle"
                     android:textColor="@color/text_secondary"
                     android:textSize="@dimen/section_body_size" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/demoPresetButton"
+                    style="@style/Widget.IncheonAI.Button.Secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="@dimen/content_spacing_medium"
+                    android:text="@string/action_apply_demo_preset" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

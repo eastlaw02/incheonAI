@@ -128,6 +128,14 @@ object PrototypeRepository {
 }
 
 object BaggageRuleEngine {
+    fun previewDecisionForItem(
+        item: RecognizedItem,
+        airlineRuleProfile: AirlineRuleProfile,
+        stringProvider: (Int, Array<out Any>) -> String,
+    ): ItemDecision {
+        return decideForItem(item, airlineRuleProfile, stringProvider)
+    }
+
     fun analyze(
         flight: FlightContext,
         airlineRuleProfile: AirlineRuleProfile,
