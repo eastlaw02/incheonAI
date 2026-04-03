@@ -84,9 +84,9 @@
                     android:layout_marginTop="@dimen/form_field_spacing"
                     android:hint="@string/hint_scan_preset">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <AutoCompleteTextView
                         style="@style/Widget.IncheonAI.TextField"
-                        android:id="@+id/airlineInput"
+                        android:id="@+id/presetInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="none" />
@@ -102,6 +102,15 @@
                     android:padding="@dimen/panel_padding"
                     android:scaleType="centerInside"
                     android:src="@android:drawable/ic_menu_camera" />
+
+                <TextView
+                    android:id="@+id/scanStatusText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/form_field_spacing"
+                    android:text="@string/status_image_idle"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/section_body_size" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
